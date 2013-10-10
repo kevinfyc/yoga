@@ -1,0 +1,6 @@
+E:\DeskTop\yoga\YogaHouseMgr\Model\bin\Debug\Model.dll.config
+E:\DeskTop\yoga\YogaHouseMgr\Model\bin\Debug\Model.dll
+E:\DeskTop\yoga\YogaHouseMgr\Model\bin\Debug\Model.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Model\obj\Debug\Model.dll
+E:\DeskTop\yoga\YogaHouseMgr\Model\obj\Debug\Model.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

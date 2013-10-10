@@ -1,0 +1,9 @@
+E:\DeskTop\yoga\YogaHouseMgr\Control\bin\Debug\Control.dll
+E:\DeskTop\yoga\YogaHouseMgr\Control\bin\Debug\Control.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Control\obj\Debug\Control.Numberic.resources
+E:\DeskTop\yoga\YogaHouseMgr\Control\obj\Debug\Control.Paging.resources
+E:\DeskTop\yoga\YogaHouseMgr\Control\obj\Debug\Control.Properties.Resources.resources
+E:\DeskTop\yoga\YogaHouseMgr\Control\obj\Debug\Control.csproj.GenerateResource.Cache
+E:\DeskTop\yoga\YogaHouseMgr\Control\obj\Debug\Control.dll
+E:\DeskTop\yoga\YogaHouseMgr\Control\obj\Debug\Control.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache

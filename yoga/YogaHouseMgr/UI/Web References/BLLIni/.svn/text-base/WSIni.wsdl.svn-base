@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getServerPath">
+        <s:complexType />
+      </s:element>
+      <s:element name="getServerPathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getServerPathResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniWriteValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Section" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniWriteValueResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IniReadValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Section" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniReadValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IniReadValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getServerTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="getServerTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getServerTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="serverHasIni">
+        <s:complexType />
+      </s:element>
+      <s:element name="serverHasIniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="serverHasIniResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getServerPathSoapIn">
+    <wsdl:part name="parameters" element="tns:getServerPath" />
+  </wsdl:message>
+  <wsdl:message name="getServerPathSoapOut">
+    <wsdl:part name="parameters" element="tns:getServerPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IniWriteValueSoapIn">
+    <wsdl:part name="parameters" element="tns:IniWriteValue" />
+  </wsdl:message>
+  <wsdl:message name="IniWriteValueSoapOut">
+    <wsdl:part name="parameters" element="tns:IniWriteValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IniReadValueSoapIn">
+    <wsdl:part name="parameters" element="tns:IniReadValue" />
+  </wsdl:message>
+  <wsdl:message name="IniReadValueSoapOut">
+    <wsdl:part name="parameters" element="tns:IniReadValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getServerTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:getServerTime" />
+  </wsdl:message>
+  <wsdl:message name="getServerTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:getServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="serverHasIniSoapIn">
+    <wsdl:part name="parameters" element="tns:serverHasIni" />
+  </wsdl:message>
+  <wsdl:message name="serverHasIniSoapOut">
+    <wsdl:part name="parameters" element="tns:serverHasIniResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSIniSoap">
+    <wsdl:operation name="getServerPath">
+      <wsdl:input message="tns:getServerPathSoapIn" />
+      <wsdl:output message="tns:getServerPathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniWriteValue">
+      <wsdl:input message="tns:IniWriteValueSoapIn" />
+      <wsdl:output message="tns:IniWriteValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniReadValue">
+      <wsdl:input message="tns:IniReadValueSoapIn" />
+      <wsdl:output message="tns:IniReadValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getServerTime">
+      <wsdl:input message="tns:getServerTimeSoapIn" />
+      <wsdl:output message="tns:getServerTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="serverHasIni">
+      <wsdl:input message="tns:serverHasIniSoapIn" />
+      <wsdl:output message="tns:serverHasIniSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSIniSoap" type="tns:WSIniSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getServerPath">
+      <soap:operation soapAction="http://tempuri.org/getServerPath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniWriteValue">
+      <soap:operation soapAction="http://tempuri.org/IniWriteValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniReadValue">
+      <soap:operation soapAction="http://tempuri.org/IniReadValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServerTime">
+      <soap:operation soapAction="http://tempuri.org/getServerTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="serverHasIni">
+      <soap:operation soapAction="http://tempuri.org/serverHasIni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSIniSoap12" type="tns:WSIniSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getServerPath">
+      <soap12:operation soapAction="http://tempuri.org/getServerPath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniWriteValue">
+      <soap12:operation soapAction="http://tempuri.org/IniWriteValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniReadValue">
+      <soap12:operation soapAction="http://tempuri.org/IniReadValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServerTime">
+      <soap12:operation soapAction="http://tempuri.org/getServerTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="serverHasIni">
+      <soap12:operation soapAction="http://tempuri.org/serverHasIni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSIni">
+    <wsdl:port name="WSIniSoap" binding="tns:WSIniSoap">
+      <soap:address location="http://localhost:63088/WSIni.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSIniSoap12" binding="tns:WSIniSoap12">
+      <soap12:address location="http://localhost:63088/WSIni.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

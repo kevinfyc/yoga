@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YogaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="YogaModelStoreContainer">
+    <EntitySet Name="Adviser" EntityType="YogaModel.Store.Adviser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Coach" EntityType="YogaModel.Store.Coach" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Collect" EntityType="YogaModel.Store.Collect" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConsumptionRecord" EntityType="YogaModel.Store.ConsumptionRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Goods" EntityType="YogaModel.Store.Goods" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImportRecord" EntityType="YogaModel.Store.ImportRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Member" EntityType="YogaModel.Store.Member" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Payment" EntityType="YogaModel.Store.Payment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PotentialMember" EntityType="YogaModel.Store.PotentialMember" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrepaidRecord" EntityType="YogaModel.Store.PrepaidRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rack" EntityType="YogaModel.Store.Rack" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="YogaModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Adviser_User" Association="YogaModel.Store.FK_Adviser_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Adviser" EntitySet="Adviser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_collect_goods" Association="YogaModel.Store.FK_collect_goods">
+      <End Role="Goods" EntitySet="Goods" />
+      <End Role="Collect" EntitySet="Collect" />
+    </AssociationSet>
+    <AssociationSet Name="FK_collect_member" Association="YogaModel.Store.FK_collect_member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Collect" EntitySet="Collect" />
+    </AssociationSet>
+    <AssociationSet Name="FK_collect_user" Association="YogaModel.Store.FK_collect_user">
+      <End Role="User" EntitySet="User" />
+      <End Role="Collect" EntitySet="Collect" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConsumptionRecord_Goods" Association="YogaModel.Store.FK_ConsumptionRecord_Goods">
+      <End Role="Goods" EntitySet="Goods" />
+      <End Role="ConsumptionRecord" EntitySet="ConsumptionRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConsumptionRecord_Member" Association="YogaModel.Store.FK_ConsumptionRecord_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="ConsumptionRecord" EntitySet="ConsumptionRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConsumptionRecord_User" Association="YogaModel.Store.FK_ConsumptionRecord_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ConsumptionRecord" EntitySet="ConsumptionRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_member" Association="YogaModel.Store.FK_member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="ImportRecord" EntitySet="ImportRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Member_Adviser" Association="YogaModel.Store.FK_Member_Adviser">
+      <End Role="Adviser" EntitySet="Adviser" />
+      <End Role="Member" EntitySet="Member" />
+    </AssociationSet>
+    <AssociationSet Name="FK_member_coach" Association="YogaModel.Store.FK_member_coach">
+      <End Role="Coach" EntitySet="Coach" />
+      <End Role="Member" EntitySet="Member" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Goods" Association="YogaModel.Store.FK_Payment_Goods">
+      <End Role="Goods" EntitySet="Goods" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_potentialmember_adviser" Association="YogaModel.Store.FK_potentialmember_adviser">
+      <End Role="Adviser" EntitySet="Adviser" />
+      <End Role="PotentialMember" EntitySet="PotentialMember" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrepaidRecord_Member" Association="YogaModel.Store.FK_PrepaidRecord_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="PrepaidRecord" EntitySet="PrepaidRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrepaidRecord_User" Association="YogaModel.Store.FK_PrepaidRecord_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="PrepaidRecord" EntitySet="PrepaidRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rack_member" Association="YogaModel.Store.FK_rack_member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Rack" EntitySet="Rack" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Adviser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Position" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Mobilephone" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Coach">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="IsPrivate" Type="bit" Nullable="false" />
+    <Property Name="Mobilephone" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Collect">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Datie" Type="datetime" Nullable="false" />
+    <Property Name="GoodsId" Type="int" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ConsumptionRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="GoodsId" Type="int" Nullable="false" />
+    <Property Name="GoodsName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="MemberName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Money" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Goods">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ImportRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="MemberName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="IsTemp" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CardNo" Type="varchar" MaxLength="20" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Gender" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="Nation" Type="varchar" MaxLength="20" />
+    <Property Name="People" Type="varchar" MaxLength="20" />
+    <Property Name="ContractNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Telephone" Type="varchar" MaxLength="20" />
+    <Property Name="Mobilephone" Type="varchar" MaxLength="20" />
+    <Property Name="RegistDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpireDate" Type="datetime" Nullable="false" />
+    <Property Name="CardType" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CardStartMoney" Type="float" Nullable="false" />
+    <Property Name="CardRestMoney" Type="float" Nullable="false" />
+    <Property Name="Score" Type="int" Nullable="false" />
+    <Property Name="Picture" Type="varchar" MaxLength="20" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+    <Property Name="IsTemp" Type="bit" Nullable="false" />
+    <Property Name="TempTimes" Type="int" Nullable="false" />
+    <Property Name="CoachId" Type="int" />
+    <Property Name="AdviserId" Type="int" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GoodsId" Type="int" />
+  </EntityType>
+  <EntityType Name="PotentialMember">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LastContact" Type="datetime" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="Mobilephone" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Gender" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="CustomerChannel" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="AdviserId" Type="int" />
+  </EntityType>
+  <EntityType Name="PrepaidRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="MemberName" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Rack">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="RentDate" Type="datetime" Nullable="false" />
+    <Property Name="RentExpire" Type="datetime" Nullable="false" />
+    <Property Name="RenterId" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="UserType" Type="varchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <Association Name="FK_Adviser_User">
+    <End Role="User" Type="YogaModel.Store.User" Multiplicity="1" />
+    <End Role="Adviser" Type="YogaModel.Store.Adviser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Adviser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_collect_goods">
+    <End Role="Goods" Type="YogaModel.Store.Goods" Multiplicity="1" />
+    <End Role="Collect" Type="YogaModel.Store.Collect" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goods">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Collect">
+        <PropertyRef Name="GoodsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_collect_member">
+    <End Role="Member" Type="YogaModel.Store.Member" Multiplicity="1" />
+    <End Role="Collect" Type="YogaModel.Store.Collect" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Collect">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_collect_user">
+    <End Role="User" Type="YogaModel.Store.User" Multiplicity="1" />
+    <End Role="Collect" Type="YogaModel.Store.Collect" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Collect">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConsumptionRecord_Goods">
+    <End Role="Goods" Type="YogaModel.Store.Goods" Multiplicity="1" />
+    <End Role="ConsumptionRecord" Type="YogaModel.Store.ConsumptionRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goods">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ConsumptionRecord">
+        <PropertyRef Name="GoodsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConsumptionRecord_Member">
+    <End Role="Member" Type="YogaModel.Store.Member" Multiplicity="1" />
+    <End Role="ConsumptionRecord" Type="YogaModel.Store.ConsumptionRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ConsumptionRecord">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConsumptionRecord_User">
+    <End Role="User" Type="YogaModel.Store.User" Multiplicity="1" />
+    <End Role="ConsumptionRecord" Type="YogaModel.Store.ConsumptionRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ConsumptionRecord">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_member">
+    <End Role="Member" Type="YogaModel.Store.Member" Multiplicity="1" />
+    <End Role="ImportRecord" Type="YogaModel.Store.ImportRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ImportRecord">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Member_Adviser">
+    <End Role="Adviser" Type="YogaModel.Store.Adviser" Multiplicity="0..1" />
+    <End Role="Member" Type="YogaModel.Store.Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adviser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="AdviserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_member_coach">
+    <End Role="Coach" Type="YogaModel.Store.Coach" Multiplicity="0..1" />
+    <End Role="Member" Type="YogaModel.Store.Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Coach">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="CoachId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Goods">
+    <End Role="Goods" Type="YogaModel.Store.Goods" Multiplicity="0..1" />
+    <End Role="Payment" Type="YogaModel.Store.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goods">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="GoodsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_potentialmember_adviser">
+    <End Role="Adviser" Type="YogaModel.Store.Adviser" Multiplicity="0..1" />
+    <End Role="PotentialMember" Type="YogaModel.Store.PotentialMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adviser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PotentialMember">
+        <PropertyRef Name="AdviserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrepaidRecord_Member">
+    <End Role="Member" Type="YogaModel.Store.Member" Multiplicity="1" />
+    <End Role="PrepaidRecord" Type="YogaModel.Store.PrepaidRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PrepaidRecord">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrepaidRecord_User">
+    <End Role="User" Type="YogaModel.Store.User" Multiplicity="1" />
+    <End Role="PrepaidRecord" Type="YogaModel.Store.PrepaidRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PrepaidRecord">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rack_member">
+    <End Role="Member" Type="YogaModel.Store.Member" Multiplicity="0..1" />
+    <End Role="Rack" Type="YogaModel.Store.Rack" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Rack">
+        <PropertyRef Name="RenterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

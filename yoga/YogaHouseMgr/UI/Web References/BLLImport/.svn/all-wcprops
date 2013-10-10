@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/yoga/!svn/ver/99/YogaHouseMgr/UI/Web%20References/BLLImport
+END
+ImportRecord.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/yoga/!svn/ver/60/YogaHouseMgr/UI/Web%20References/BLLImport/ImportRecord.datasource
+END
+Reference.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/yoga/!svn/ver/99/YogaHouseMgr/UI/Web%20References/BLLImport/Reference.cs
+END
+WSImport.disco
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/yoga/!svn/ver/60/YogaHouseMgr/UI/Web%20References/BLLImport/WSImport.disco
+END
+Reference.map
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/yoga/!svn/ver/60/YogaHouseMgr/UI/Web%20References/BLLImport/Reference.map
+END
+WSImport.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/yoga/!svn/ver/97/YogaHouseMgr/UI/Web%20References/BLLImport/WSImport.wsdl
+END

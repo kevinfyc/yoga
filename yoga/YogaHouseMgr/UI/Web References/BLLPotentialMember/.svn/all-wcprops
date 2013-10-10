@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/yoga/!svn/ver/80/YogaHouseMgr/UI/Web%20References/BLLPotentialMember
+END
+PotentialMember.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/yoga/!svn/ver/3/YogaHouseMgr/UI/Web%20References/BLLPotentialMember/PotentialMember.datasource
+END
+WSPotentialMember.disco
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/yoga/!svn/ver/3/YogaHouseMgr/UI/Web%20References/BLLPotentialMember/WSPotentialMember.disco
+END
+Reference.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/yoga/!svn/ver/80/YogaHouseMgr/UI/Web%20References/BLLPotentialMember/Reference.cs
+END
+WSPotentialMember.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/yoga/!svn/ver/79/YogaHouseMgr/UI/Web%20References/BLLPotentialMember/WSPotentialMember.wsdl
+END
+Reference.map
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/yoga/!svn/ver/3/YogaHouseMgr/UI/Web%20References/BLLPotentialMember/Reference.map
+END

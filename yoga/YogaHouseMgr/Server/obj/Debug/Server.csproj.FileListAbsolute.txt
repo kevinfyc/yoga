@@ -1,0 +1,7 @@
+E:\DeskTop\yoga\YogaHouseMgr\Server\bin\Server.dll
+E:\DeskTop\yoga\YogaHouseMgr\Server\bin\Server.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Server\bin\Model.dll
+E:\DeskTop\yoga\YogaHouseMgr\Server\bin\Model.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+E:\DeskTop\yoga\YogaHouseMgr\Server\obj\Debug\Server.dll
+E:\DeskTop\yoga\YogaHouseMgr\Server\obj\Debug\Server.pdb

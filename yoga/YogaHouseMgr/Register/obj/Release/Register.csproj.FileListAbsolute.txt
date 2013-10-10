@@ -1,0 +1,8 @@
+E:\DeskTop\yoga\YogaHouseMgr\Register\bin\Release\Register.exe.config
+E:\DeskTop\yoga\YogaHouseMgr\Register\bin\Release\Register.exe
+E:\DeskTop\yoga\YogaHouseMgr\Register\bin\Release\Register.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Register\obj\Release\Register.Form1.resources
+E:\DeskTop\yoga\YogaHouseMgr\Register\obj\Release\Register.Properties.Resources.resources
+E:\DeskTop\yoga\YogaHouseMgr\Register\obj\Release\Register.csproj.GenerateResource.Cache
+E:\DeskTop\yoga\YogaHouseMgr\Register\obj\Release\Register.exe
+E:\DeskTop\yoga\YogaHouseMgr\Register\obj\Release\Register.pdb

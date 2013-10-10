@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="UI.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <applicationSettings>
+        <UI.Properties.Settings>
+            <setting name="UI_BLLCoach_WSCoach" serializeAs="String">
+                <value>http://localhost:63088/WSCoach.asmx</value>
+            </setting>
+            <setting name="UI_BLLMember_WSMemeber" serializeAs="String">
+                <value>http://localhost:63088/WSMemeber.asmx</value>
+            </setting>
+            <setting name="UI_BLLAdviser_WSAdviser" serializeAs="String">
+                <value>http://localhost:63088/WSAdviser.asmx</value>
+            </setting>
+            <setting name="UI_BLLPotentialMember_WSPotentialMember" serializeAs="String">
+                <value>http://localhost:63088/WSPotentialMember.asmx</value>
+            </setting>
+            <setting name="UI_BLLGoods_WSGoods" serializeAs="String">
+                <value>http://localhost:63088/WSGoods.asmx</value>
+            </setting>
+            <setting name="UI_BLLPayment_WSPayment" serializeAs="String">
+                <value>http://localhost:63088/WSPayment.asmx</value>
+            </setting>
+            <setting name="UI_BLLCollect_WSCollect" serializeAs="String">
+                <value>http://localhost:63088/WSCollect.asmx</value>
+            </setting>
+            <setting name="UI_BLLUser_WSUser" serializeAs="String">
+                <value>http://localhost:63088/WSUser.asmx</value>
+            </setting>
+            <setting name="UI_BLLPrepaid_WSPrepaid" serializeAs="String">
+                <value>http://localhost:63088/WSPrepaid.asmx</value>
+            </setting>
+            <setting name="UI_BLLConsumption_WSConsumption" serializeAs="String">
+                <value>http://localhost:63088/WSConsumption.asmx</value>
+            </setting>
+            <setting name="UI_BLLRack_WSRack" serializeAs="String">
+                <value>http://localhost:63088/WSRack.asmx</value>
+            </setting>
+            <setting name="UI_BLLImport_WSImport" serializeAs="String">
+                <value>http://localhost:63088/WSImport.asmx</value>
+            </setting>
+            <setting name="YogaHouseMgr_BLLIni_WSIni" serializeAs="String">
+                <value>http://localhost:63088/WSIni.asmx</value>
+            </setting>
+        </UI.Properties.Settings>
+    </applicationSettings>
+  <appSettings>
+    <add key="server" value="http://localhost:63088/"/>
+  </appSettings>
+</configuration>

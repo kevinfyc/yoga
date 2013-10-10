@@ -1,0 +1,12 @@
+E:\DeskTop\yoga\YogaHouseMgr\Model\bin\Release\Model.dll.config
+E:\DeskTop\yoga\YogaHouseMgr\Model\bin\Release\Model.dll
+E:\DeskTop\yoga\YogaHouseMgr\Model\bin\Release\Model.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Model\obj\Release\Model.dll
+E:\DeskTop\yoga\YogaHouseMgr\Model\obj\Release\Model.pdb
+E:\DeskTop\yoga\YogaHouseMgr\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\Programs\bak\Desktop\Yoga\YogaHouseMgr\Model\bin\Release\Model.dll.config
+D:\Programs\bak\Desktop\Yoga\YogaHouseMgr\Model\bin\Release\Model.dll
+D:\Programs\bak\Desktop\Yoga\YogaHouseMgr\Model\bin\Release\Model.pdb
+D:\Programs\bak\Desktop\Yoga\YogaHouseMgr\Model\obj\Release\Model.dll
+D:\Programs\bak\Desktop\Yoga\YogaHouseMgr\Model\obj\Release\Model.pdb
+D:\Programs\bak\Desktop\Yoga\YogaHouseMgr\Model\obj\Release\Model.csprojResolveAssemblyReference.cache

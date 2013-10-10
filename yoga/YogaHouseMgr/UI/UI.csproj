@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10BA82CE-5E20-4F34-BBBE-FAEA955080E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>YogaHouseMgr</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tray.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adviser\frmAdviserMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adviser\frmAdviserMgr.Designer.cs">
+      <DependentUpon>frmAdviserMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="card.cs" />
+    <Compile Include="CardReader.cs" />
+    <Compile Include="common.cs" />
+    <Compile Include="Coach\frmCoachAllot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\frmCoachAllot.Designer.cs">
+      <DependentUpon>frmCoachAllot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\frmCoachMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\frmCoachMgr.Designer.cs">
+      <DependentUpon>frmCoachMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\frmCoachSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\frmCoachSignIn.Designer.cs">
+      <DependentUpon>frmCoachSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\frmPersonalCoachCourseMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\frmPersonalCoachCourseMgr.Designer.cs">
+      <DependentUpon>frmPersonalCoachCourseMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach\frmPersonalCoachInfoMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach\frmPersonalCoachInfoMgr.Designer.cs">
+      <DependentUpon>frmPersonalCoachInfoMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\frmeRceiveInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\frmeRceiveInfo.Designer.cs">
+      <DependentUpon>frmeRceiveInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\frmPaymentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\frmPaymentInfo.Designer.cs">
+      <DependentUpon>frmPaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\frmPaymentMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\frmPaymentMgr.Designer.cs">
+      <DependentUpon>frmPaymentMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financial\frmReceiveMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\frmReceiveMgr.Designer.cs">
+      <DependentUpon>frmReceiveMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNetConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNetConfiguration.Designer.cs">
+      <DependentUpon>frmNetConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserMgr.Designer.cs">
+      <DependentUpon>frmUserMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYogaHouseMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYogaHouseMgr.Designer.cs">
+      <DependentUpon>frmYogaHouseMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\frmGoodsMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goods\frmGoodsMgr.Designer.cs">
+      <DependentUpon>frmGoodsMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integral\frmIntegralConsumption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integral\frmIntegralConsumption.Designer.cs">
+      <DependentUpon>frmIntegralConsumption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integral\frmIntegralGain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integral\frmIntegralGain.Designer.cs">
+      <DependentUpon>frmIntegralGain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Integral\frmIntegralQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Integral\frmIntegralQuery.Designer.cs">
+      <DependentUpon>frmIntegralQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Potential\frmPotentialCustomersInfoMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Potential\frmPotentialCustomersInfoMgr.Designer.cs">
+      <DependentUpon>frmPotentialCustomersInfoMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Potential\frmPotentialCustomersPickInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Potential\frmPotentialCustomersPickInfo.Designer.cs">
+      <DependentUpon>frmPotentialCustomersPickInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Potential\frmPotentialCustomersToVip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Potential\frmPotentialCustomersToVip.Designer.cs">
+      <DependentUpon>frmPotentialCustomersToVip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Potential\frmPotentialCustomersTrackeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Potential\frmPotentialCustomersTrackeInfo.Designer.cs">
+      <DependentUpon>frmPotentialCustomersTrackeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rack\frmRackMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rack\frmRackMgr.Designer.cs">
+      <DependentUpon>frmRackMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\License.cs" />
+    <Compile Include="Untils.cs" />
+    <Compile Include="VideoWork.cs" />
+    <Compile Include="Vip\frmAddNewVip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmAddNewVip.Designer.cs">
+      <DependentUpon>frmAddNewVip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipConsumption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipConsumption.Designer.cs">
+      <DependentUpon>frmVipConsumption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipPrepaidMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipPrepaidMgr.Designer.cs">
+      <DependentUpon>frmVipPrepaidMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipEnter.Designer.cs">
+      <DependentUpon>frmVipEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipEnterInfoMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipEnterInfoMgr.Designer.cs">
+      <DependentUpon>frmVipEnterInfoMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipInfoMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipInfoMgr.Designer.cs">
+      <DependentUpon>frmVipInfoMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipPrepaid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipPrepaid.Designer.cs">
+      <DependentUpon>frmVipPrepaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipQuery.Designer.cs">
+      <DependentUpon>frmVipQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipTrackeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipTrackeInfo.Designer.cs">
+      <DependentUpon>frmVipTrackeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip\frmVipConsumptionMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip\frmVipConsumptionMgr.Designer.cs">
+      <DependentUpon>frmVipConsumptionMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLAdviser\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLCoach\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLCollect\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLConsumption\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLGoods\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLImport\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLIni\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLMember\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLPayment\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLPotentialMember\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLPrepaid\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLRack\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BLLUser\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Adviser\frmAdviserMgr.resx">
+      <DependentUpon>frmAdviserMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\frmCoachAllot.resx">
+      <DependentUpon>frmCoachAllot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\frmCoachMgr.resx">
+      <DependentUpon>frmCoachMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\frmCoachSignIn.resx">
+      <DependentUpon>frmCoachSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\frmPersonalCoachCourseMgr.resx">
+      <DependentUpon>frmPersonalCoachCourseMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach\frmPersonalCoachInfoMgr.resx">
+      <DependentUpon>frmPersonalCoachInfoMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\frmeRceiveInfo.resx">
+      <DependentUpon>frmeRceiveInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\frmPaymentInfo.resx">
+      <DependentUpon>frmPaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\frmPaymentMgr.resx">
+      <DependentUpon>frmPaymentMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\frmReceiveMgr.resx">
+      <DependentUpon>frmReceiveMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNetConfiguration.resx">
+      <DependentUpon>frmNetConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserMgr.resx">
+      <DependentUpon>frmUserMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYogaHouseMgr.resx">
+      <DependentUpon>frmYogaHouseMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goods\frmGoodsMgr.resx">
+      <DependentUpon>frmGoodsMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integral\frmIntegralConsumption.resx">
+      <DependentUpon>frmIntegralConsumption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integral\frmIntegralGain.resx">
+      <DependentUpon>frmIntegralGain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Integral\frmIntegralQuery.resx">
+      <DependentUpon>frmIntegralQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Potential\frmPotentialCustomersInfoMgr.resx">
+      <DependentUpon>frmPotentialCustomersInfoMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Potential\frmPotentialCustomersPickInfo.resx">
+      <DependentUpon>frmPotentialCustomersPickInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Potential\frmPotentialCustomersToVip.resx">
+      <DependentUpon>frmPotentialCustomersToVip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Potential\frmPotentialCustomersTrackeInfo.resx">
+      <DependentUpon>frmPotentialCustomersTrackeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rack\frmRackMgr.resx">
+      <DependentUpon>frmRackMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmAddNewVip.resx">
+      <DependentUpon>frmAddNewVip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipConsumption.resx">
+      <DependentUpon>frmVipConsumption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipPrepaidMgr.resx">
+      <DependentUpon>frmVipPrepaidMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipEnter.resx">
+      <DependentUpon>frmVipEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipEnterInfoMgr.resx">
+      <DependentUpon>frmVipEnterInfoMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipInfoMgr.resx">
+      <DependentUpon>frmVipInfoMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipPrepaid.resx">
+      <DependentUpon>frmVipPrepaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipQuery.resx">
+      <DependentUpon>frmVipQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipTrackeInfo.resx">
+      <DependentUpon>frmVipTrackeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip\frmVipConsumptionMgr.resx">
+      <DependentUpon>frmVipConsumptionMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\BLLAdviser\Adviser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLAdviser\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLAdviser\WSAdviser.wsdl" />
+    <None Include="Web References\BLLCoach\Coach.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLCoach\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLCoach\WSCoach.wsdl" />
+    <None Include="Web References\BLLCollect\Collect.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLCollect\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLCollect\WSCollect.wsdl" />
+    <None Include="Web References\BLLConsumption\ConsumptionRecord.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLConsumption\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLConsumption\WSConsumption.wsdl" />
+    <None Include="Web References\BLLGoods\Goods.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLGoods\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLGoods\WSGoods.wsdl" />
+    <None Include="Web References\BLLImport\ImportRecord.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLImport\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLImport\WSImport.wsdl" />
+    <None Include="Web References\BLLIni\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLIni\WSIni.wsdl" />
+    <None Include="Web References\BLLMember\Member.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLMember\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLMember\WSMemeber.wsdl" />
+    <None Include="Web References\BLLPayment\Payment.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLPayment\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLPayment\WSPayment.wsdl" />
+    <None Include="Web References\BLLPotentialMember\PotentialMember.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLPotentialMember\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLPotentialMember\WSPotentialMember.wsdl" />
+    <None Include="Web References\BLLPrepaid\PrepaidRecord.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLPrepaid\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLPrepaid\WSPrepaid.wsdl" />
+    <None Include="Web References\BLLRack\Rack.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLRack\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLRack\WSRack.wsdl" />
+    <None Include="Web References\BLLUser\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BLLUser\User.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\BLLUser\WSUser.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Read Me.txt" />
+    <Content Include="tray.ico" />
+    <None Include="Web References\BLLIni\WSIni.disco" />
+    <None Include="Web References\BLLImport\WSImport.disco" />
+    <None Include="Web References\BLLRack\WSRack.disco" />
+    <None Include="Web References\BLLConsumption\WSConsumption.disco" />
+    <None Include="Web References\BLLPrepaid\WSPrepaid.disco" />
+    <None Include="Web References\BLLUser\WSUser.disco" />
+    <None Include="Web References\BLLCollect\WSCollect.disco" />
+    <None Include="Web References\BLLPayment\WSPayment.disco" />
+    <None Include="Web References\BLLGoods\WSGoods.disco" />
+    <None Include="Resources\backimage.jpg" />
+    <None Include="Web References\BLLPotentialMember\WSPotentialMember.disco" />
+    <None Include="Web References\BLLAdviser\WSAdviser.disco" />
+    <None Include="Web References\BLLMember\WSMemeber.disco" />
+    <None Include="Web References\BLLCoach\WSCoach.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:63088/WSAdviser.asmx%3fop=Add">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLAdviser\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSAdviser.asmx%3fop=Add</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLAdviser_WSAdviser</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSCoach.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLCoach\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSCoach.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLCoach_WSCoach</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSCollect.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLCollect\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSCollect.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLCollect_WSCollect</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSConsumption.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLConsumption\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSConsumption.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLConsumption_WSConsumption</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSGoods.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLGoods\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSGoods.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLGoods_WSGoods</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSImport.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLImport\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSImport.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLImport_WSImport</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSIni.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLIni\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSIni.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>YogaHouseMgr_BLLIni_WSIni</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSMemeber.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLMember\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSMemeber.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLMember_WSMemeber</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSPayment.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLPayment\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSPayment.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLPayment_WSPayment</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSPotentialMember.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLPotentialMember\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSPotentialMember.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLPotentialMember_WSPotentialMember</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSPrepaid.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLPrepaid\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSPrepaid.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLPrepaid_WSPrepaid</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSRack.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLRack\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSRack.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLRack_WSRack</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:63088/WSUser.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BLLUser\</RelPath>
+      <UpdateFromURL>http://localhost:63088/WSUser.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_BLLUser_WSUser</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{342fef77-7c71-4e09-abbf-c184d26c614b}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
