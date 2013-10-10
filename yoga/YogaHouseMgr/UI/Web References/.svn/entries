@@ -1,67 +1,0 @@
-10
-
-dir
-103
-https://www.svnchina.com/svn/yoga/YogaHouseMgr/UI/Web%20References
-https://www.svnchina.com/svn/yoga
-
-
-
-2013-08-29T11:56:32.460193Z
-103
-iamkevinf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-e6b01e0b-1963-45cd-9982-9ce523c7ead4
-
-BLLCollect
-dir
-
-BLLMember
-dir
-
-BLLPotentialMember
-dir
-
-BLLImport
-dir
-
-BLLGoods
-dir
-
-BLLAdviser
-dir
-
-BLLCoach
-dir
-
-BLLPayment
-dir
-
-BLLUser
-dir
-
-BLLConsumption
-dir
-
-BLLIni
-dir
-
-BLLRack
-dir
-
-BLLPrepaid
-dir
-
