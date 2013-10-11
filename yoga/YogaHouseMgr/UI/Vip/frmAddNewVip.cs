@@ -128,6 +128,11 @@ namespace UI.Vip
                 MessageBox.Show("备注长度不能超过1000");
                 return false;
             }
+            if (dateBirthday.Value == null)
+            {
+                MessageBox.Show("生日信息不能为空");
+                return false;
+            }
             return true;
         }
         private void btnAdd_Click(object sender, EventArgs e)
